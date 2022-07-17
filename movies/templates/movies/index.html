@@ -2,6 +2,16 @@
 {% block body %}
 <div class="block">
 <div class="overlay">
+  <center>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} mt-2">
+        {{ message }}
+    </div>
+    {% endfor %}
+      {% endif %}
+     <!-- end messages  -->
+  </center>
 <div class="container">
 
     <div class="row height d-flex justify-content-center align-items-center">
@@ -16,7 +26,6 @@
       </div>
       
     </div>
-
   </div>
 </div>
 </div>

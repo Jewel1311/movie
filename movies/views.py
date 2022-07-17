@@ -8,7 +8,9 @@ from django.contrib import messages
 def search_movie(request):
     if request.method == "POST":
         name = request.POST['movie']
-        if name is not None:
+        if name is "":
+            messages.warning(request, f"Please Provide a name")
+        else:
             return redirect('movie_view', name=name)
     return render(request, 'movies/index.html')
 
