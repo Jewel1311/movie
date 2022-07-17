@@ -19,7 +19,8 @@ def movie_view(request, name):
     count = len(details['results'])
     if count != 0:
         context = {
-            'results': details['results']
+            'results': details['results'],
+            'name': name
         } 
         return render(request, 'movies/list.html',context)
     messages.warning(request,f'No movies found')
