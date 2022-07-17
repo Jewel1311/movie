@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(74, 73, 73);
+}
+.block{
+    background-image: url("../images/m-background.jpg");
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.7);
+}
+.height{
+
+    height: 100vh;
+}
+
+.form{
+
+    position: relative;
+}
+
+.form .fa-search{
+
+    position: absolute;
+    top:20px;
+    left: 20px;
+  
+
+}
+
+.form span{
+
+        position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+    padding-left: 7px;
+}
+
+.left-pan i{
+   
+   padding-left: 10px;
+}
+
+.form-input{
+
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}
+
+button{
+    border: none;
+    background-color: white;
+}
+
+.navbar{
+    position: sticky;
+    width: 100%;
+    z-index: 100;
+    top:0
+}
+
+.nav-link{
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+.nav-link:hover{
+    color:rgb(218, 215, 215);
+}
+
+

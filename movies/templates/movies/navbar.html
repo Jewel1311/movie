@@ -1,0 +1,8 @@
+{% extends 'movies/base.html' %}
+
+{% block body %}
+<nav class="navbar bg-dark">
+    <a href="{% url 'search_movie' %}" class="nav-link"><span><i class="fa fa-search"></i></span> Search Movies</a>
+</nav>
+  {% block content %} {% endblock content%}
+{% endblock body %}

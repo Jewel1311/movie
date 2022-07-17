@@ -1,0 +1,23 @@
+{% extends "movies/base.html" %}
+{% block body %}
+<div class="block">
+<div class="overlay">
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-6">
+        <form method="POST" class="form">
+          {% csrf_token %}
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control form-input" name="movie" placeholder="Search movies...">
+          <span class="left-pan"><button type="submit"><i class="fa fa-arrow-right"></i></button></span>
+        </form>    
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+</div>
+  {% endblock body %}

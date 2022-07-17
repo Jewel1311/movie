@@ -1,0 +1,39 @@
+{% extends 'movies/navbar.html' %}
+
+{% block content %}
+
+<div class="container rounded mt-3 mb-3">
+<div class="row d-flex justify-content-between">
+
+{% for result in results %}
+    <div class="card m-3 p-0" style="max-width: 540px;">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ result.image }}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">{{ result.title }}</h5>
+            <p class="card-text">{{ result.description }}</p>   
+            <a href="{% url 'detail_view' result.id %}" class="btn btn-primary">More details</a>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endfor %}
+
+<center>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} mt-2">
+        {{ message }}
+    </div>
+    {% endfor %}
+      {% endif %}
+     <!-- end messages  -->
+</center>
+  
+</div>
+</div>
+
+{% endblock content %}
